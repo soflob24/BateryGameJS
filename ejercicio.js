@@ -3,7 +3,7 @@ const imagen = document.getElementById('imagen');
 const sonido = document.querySelector('.sonido');
 const control = document.querySelector('.control');
 
-document.addEventListener ('keypress', (e) => {
+document.addEventListener ('keypress', (e) => {  // En el documento se crea un evento para que las condiciones funcionen a partir de que se oprima una tecla 
     switch (e.keyCode) {
         case 115:
             sonido.innerHTML = `<audio src ='sounds/hit-hat.mp3' autoplay></audio>`;
