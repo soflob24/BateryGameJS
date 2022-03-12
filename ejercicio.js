@@ -4,10 +4,10 @@ const sonido = document.querySelector('.sonido');
 const control = document.querySelector('.control');
 
 document.addEventListener ('keypress', (e) => {  // En el documento se crea un evento para que las condiciones funcionen a partir de que se oprima una tecla 
-    switch (e.keyCode) {
+    switch (e.keyCode) { // Condiciones a partir de los números del teclado
         case 115:
-            sonido.innerHTML = `<audio src ='sounds/hit-hat.mp3' autoplay></audio>`;
-            imagen.src="img/base-hit-hat.png";
+            sonido.innerHTML = `<audio src ='sounds/hit-hat.mp3' autoplay></audio>`; // Se incorpora sonido para las diferentes partes de la bateria
+            imagen.src="img/base-hit-hat.png"; // Se agrega un imagen para resaltar la parte de la bateria que está sonando
             break;
         case 100:
             sonido.innerHTML = `<audio src ='sounds/platillo-crash-izquierdo.mp3' autoplay></audio>`;
@@ -44,15 +44,15 @@ document.addEventListener ('keypress', (e) => {  // En el documento se crea un e
     
 })
 
-document.addEventListener('DOMContentLoaded',() =>{
+document.addEventListener('DOMContentLoaded',() =>{ // Se crea un evento al documento cada vez que este se recargue y esté listo
     control.style.display="none"
 })
 
-instructions.addEventListener('click',() =>{
+instructions.addEventListener('click',() =>{ // Las instrucciones de la batería aparecerán cuando se dé click en la opción de "instrucciones"
     control.style.display="flex";
 
-    setTimeout(() =>{
-        control.style.display="none";
+    setTimeout(() =>{ // Las instrucciones aparecerán en pantalla por un tiempo estimado de 6 segundos
+        control.style.display="none"; 
     }, 6000) 
 })
 
